@@ -1,0 +1,41 @@
+#!/bin/bash
+set -e
+
+APP_NAME=devops-project
+IMAGE_NAME=devops-project
+IMAGE_TAG=latest
+
+DOCKER_HOST_USER=ec2-user
+DOCKER_HOST_IP=${DOCKER_HOST_IP}
+
+echo "===== Workspace ====="
+pwd
+ls -la
+cd DevOps-Project-01/hello-world
+
+echo "===== Building Application ====="
+# If Java
+mvn clean package -DskipTests
+
+# If Node.js
+# npm install
+# npm run build
+
+echo "===== Building Docker Image ====="
+docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+
+echo "===== Saving Docker Image ====="
+docker save ${IMAGE_NAME}:${IMAGE_TAG} > ${IMAGE_NAME}.tar
+
+echo "===== Copying Image to Docker Host ====="
+scp ${IMAGE_NAME}.tar ${DOCKER_HOST_USER}@${DOCKER_HOST_IP}:/tmp/
+
+echo "===== Deploying on Docker Host ====="
+ssh ${DOCKER_HOST_USER}@${DOCKER_HOST_IP} << EOF
+docker load -i /tmp/${IMAGE_NAME}.tar
+docker stop ${APP_NAME} || true
+docker rm ${APP_NAME} || true
+docker run -d --name ${APP_NAME} -p 8085:8080 ${IMAGE_NAME}:${IMAGE_TAG}
+EOF
+
+echo "===== Deployment Complete ====="
