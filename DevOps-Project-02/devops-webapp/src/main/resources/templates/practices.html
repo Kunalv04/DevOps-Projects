@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">DevOps Best Practices</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/concepts" class="nav-link">Concepts</a></li>
+                <li><a href="/tools" class="nav-link">Tools</a></li>
+                <li><a href="/lifecycle" class="nav-link">Lifecycle</a></li>
+                <li><a href="/practices" class="nav-link active">Practices</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">DevOps <span class="gradient-text">Best Practices</span></h1>
+            <p class="page-subtitle">
+                Industry-proven practices that help organizations successfully implement and scale DevOps.
+            </p>
+        </div>
+    </header>
+
+    <!-- Practices Section -->
+    <section class="practices-section">
+        <div class="container">
+            <div class="practices-grid">
+                <div th:each="practice : ${practices}" class="practice-card" th:id="${practice.id}">
+                    <div class="practice-header">
+                        <div class="practice-icon-large" th:switch="${practice.id}">
+                            <span th:case="'automate'">🤖</span>
+                            <span th:case="'shiftleft'">⬅️</span>
+                            <span th:case="'gitops'">📚</span>
+                            <span th:case="'devsecops'">🔒</span>
+                            <span th:case="'immutable'">📦</span>
+                            <span th:case="'monitoreverything'">📊</span>
+                            <span th:case="'collaborate'">🤝</span>
+                            <span th:case="*">⭐</span>
+                        </div>
+                        <h2 class="practice-title" th:text="${practice.name}">Practice Name</h2>
+                    </div>
+                    <p class="practice-description" th:text="${practice.description}">
+                        Practice description goes here.
+                    </p>
+                    <div class="practice-implementation">
+                        <h4>Implementation:</h4>
+                        <ul>
+                            <li th:each="item : ${practice.items}" th:text="${item}">Implementation item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALMS Framework -->
+    <section class="calms-section">
+        <div class="container">
+            <h2 class="section-title">The CALMS Framework</h2>
+            <p class="section-subtitle">
+                A framework for understanding the key aspects of DevOps culture and implementation.
+            </p>
+            <div class="calms-grid">
+                <div class="calms-card">
+                    <div class="calms-letter">C</div>
+                    <h3>Culture</h3>
+                    <p>Shared responsibility, collaboration, and breaking down silos between teams.</p>
+                </div>
+                <div class="calms-card">
+                    <div class="calms-letter">A</div>
+                    <h3>Automation</h3>
+                    <p>Automate repetitive tasks to reduce errors and increase delivery speed.</p>
+                </div>
+                <div class="calms-card">
+                    <div class="calms-letter">L</div>
+                    <h3>Lean</h3>
+                    <p>Focus on value stream mapping and eliminating waste in processes.</p>
+                </div>
+                <div class="calms-card">
+                    <div class="calms-letter">M</div>
+                    <h3>Measurement</h3>
+                    <p>Collect and analyze metrics to drive data-driven decisions.</p>
+                </div>
+                <div class="calms-card">
+                    <div class="calms-letter">S</div>
+                    <h3>Sharing</h3>
+                    <p>Share knowledge, tools, and feedback across the organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section class="getting-started-section">
+        <div class="container">
+            <div class="getting-started-box">
+                <h2>Getting Started with DevOps</h2>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Assess Current State</h4>
+                            <p>Evaluate your current development and operations processes.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Start Small</h4>
+                            <p>Begin with a pilot project to demonstrate value.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Build the Pipeline</h4>
+                            <p>Implement CI/CD for automated builds and deployments.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Measure & Improve</h4>
+                            <p>Track metrics and continuously optimize your processes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/concepts">Concepts</a>
+                    <a href="/tools">Tools</a>
+                    <a href="/lifecycle">Lifecycle</a>
+                    <a href="/practices">Practices</a>
+                    <a href="/about">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

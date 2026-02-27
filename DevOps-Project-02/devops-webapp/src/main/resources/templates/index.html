@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">DevOps Basics</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/concepts" class="nav-link">Concepts</a></li>
+                <li><a href="/tools" class="nav-link">Tools</a></li>
+                <li><a href="/lifecycle" class="nav-link">Lifecycle</a></li>
+                <li><a href="/practices" class="nav-link">Practices</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-text">Learn DevOps</span>
+            </div>
+            <h1 class="hero-title">Master the Fundamentals of <span class="gradient-text">DevOps</span></h1>
+            <p class="hero-subtitle">
+                Discover the practices, tools, and culture that bridge development and operations, 
+                enabling organizations to deliver applications and services at high velocity.
+            </p>
+            <div class="hero-cta">
+                <a href="/concepts" class="btn btn-primary">Explore Concepts</a>
+                <a href="/lifecycle" class="btn btn-secondary">View Lifecycle</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="infinity-loop">
+                <div class="loop-dev">DEV</div>
+                <div class="loop-ops">OPS</div>
+                <div class="loop-arrow">⟷</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Cards -->
+    <section class="overview-section">
+        <div class="container">
+            <h2 class="section-title">What is DevOps?</h2>
+            <p class="section-description">
+                DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). 
+                It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.
+            </p>
+            
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Continuous Integration</h3>
+                    <p>Merge code changes frequently and validate with automated builds and tests.</p>
+                    <a href="/concepts#ci" class="card-link">Learn more →</a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Continuous Delivery</h3>
+                    <p>Automatically release code changes to production safely and quickly.</p>
+                    <a href="/concepts#cd" class="card-link">Learn more →</a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">📦</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Manage and provision infrastructure through code instead of manual processes.</p>
+                    <a href="/concepts#iac" class="card-link">Learn more →</a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Monitoring & Logging</h3>
+                    <p>Track application performance and collect insights for optimization.</p>
+                    <a href="/concepts#monitoring" class="card-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Benefits of DevOps</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <h3>Faster Delivery</h3>
+                    <p>Deploy code more frequently with automated pipelines and reduce time-to-market.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <h3>Higher Quality</h3>
+                    <p>Catch bugs early with automated testing and maintain consistent code quality.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <h3>Improved Collaboration</h3>
+                    <p>Break down silos between teams and foster a culture of shared responsibility.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">04</div>
+                    <h3>Greater Efficiency</h3>
+                    <p>Automate repetitive tasks and focus on innovation rather than maintenance.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">05</div>
+                    <h3>Enhanced Security</h3>
+                    <p>Integrate security practices throughout the development lifecycle.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">06</div>
+                    <h3>Better Reliability</h3>
+                    <p>Ensure system stability with monitoring, logging, and proactive issue detection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to Dive Deeper?</h2>
+                <p>Explore the complete DevOps lifecycle, essential tools, and best practices.</p>
+                <div class="cta-buttons">
+                    <a href="/lifecycle" class="btn btn-primary">View DevOps Lifecycle</a>
+                    <a href="/tools" class="btn btn-outline">Explore Tools</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/concepts">Concepts</a>
+                    <a href="/tools">Tools</a>
+                    <a href="/lifecycle">Lifecycle</a>
+                    <a href="/practices">Practices</a>
+                    <a href="/about">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

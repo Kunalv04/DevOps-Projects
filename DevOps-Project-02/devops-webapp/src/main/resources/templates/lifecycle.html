@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">DevOps Lifecycle</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/concepts" class="nav-link">Concepts</a></li>
+                <li><a href="/tools" class="nav-link">Tools</a></li>
+                <li><a href="/lifecycle" class="nav-link active">Lifecycle</a></li>
+                <li><a href="/practices" class="nav-link">Practices</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">The <span class="gradient-text">DevOps Lifecycle</span></h1>
+            <p class="page-subtitle">
+                Explore the 8 phases of the DevOps infinity loop that enable continuous delivery and improvement.
+            </p>
+        </div>
+    </header>
+
+    <!-- Infinity Loop Visualization -->
+    <section class="infinity-section">
+        <div class="container">
+            <div class="infinity-container">
+                <div class="infinity-half left">
+                    <h3>Development</h3>
+                </div>
+                <div class="infinity-half right">
+                    <h3>Operations</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifecycle Phases -->
+    <section class="lifecycle-section">
+        <div class="container">
+            <div class="phases-timeline">
+                <div th:each="phase, iterStat : ${phases}" class="phase-item" th:classappend="${iterStat.odd} ? 'phase-right' : 'phase-left'" th:id="${phase.id}">
+                    <div class="phase-number" th:text="${iterStat.count}">1</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title" th:text="${phase.name}">Phase Name</h2>
+                            <div class="phase-icon" th:switch="${phase.id}">
+                                <span th:case="'plan'">📋</span>
+                                <span th:case="'code'">💻</span>
+                                <span th:case="'build'">🔨</span>
+                                <span th:case="'test'">🧪</span>
+                                <span th:case="'release'">🏷️</span>
+                                <span th:case="'deploy'">🚀</span>
+                                <span th:case="'operate'">⚙️</span>
+                                <span th:case="'monitor'">📊</span>
+                                <span th:case="*">🔹</span>
+                            </div>
+                        </div>
+                        <p class="phase-description" th:text="${phase.description}">
+                            Phase description goes here.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li th:each="item : ${phase.items}" th:text="${item}">Activity item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Loop -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-box">
+                <h2>The Feedback Loop</h2>
+                <p>
+                    The DevOps lifecycle is a continuous loop. Insights from monitoring feed back into planning, 
+                    creating a cycle of continuous improvement. This feedback-driven approach ensures that 
+                    applications evolve based on real user needs and system performance.
+                </p>
+                <div class="feedback-visual">
+                    <div class="feedback-cycle">
+                        <span class="cycle-item">Plan</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Code</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Build</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Test</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Release</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Deploy</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Operate</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Monitor</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Plan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/concepts">Concepts</a>
+                    <a href="/tools">Tools</a>
+                    <a href="/lifecycle">Lifecycle</a>
+                    <a href="/practices">Practices</a>
+                    <a href="/about">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

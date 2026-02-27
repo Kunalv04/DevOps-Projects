@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">DevOps Tools</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/concepts" class="nav-link">Concepts</a></li>
+                <li><a href="/tools" class="nav-link active">Tools</a></li>
+                <li><a href="/lifecycle" class="nav-link">Lifecycle</a></li>
+                <li><a href="/practices" class="nav-link">Practices</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Essential <span class="gradient-text">DevOps Tools</span></h1>
+            <p class="page-subtitle">
+                Discover the tools that power modern DevOps workflows across the entire software development lifecycle.
+            </p>
+        </div>
+    </header>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="tools-grid">
+                <div th:each="tool : ${tools}" class="tool-card" th:id="${tool.id}">
+                    <div class="tool-header">
+                        <div class="tool-icon-large" th:switch="${tool.id}">
+                            <span th:case="'vcs'">📚</span>
+                            <span th:case="'cicd'">⚙️</span>
+                            <span th:case="'containers'">📦</span>
+                            <span th:case="'orchestration'">☸️</span>
+                            <span th:case="'iac-tools'">🏗️</span>
+                            <span th:case="'observability'">📊</span>
+                            <span th:case="'cloud'">☁️</span>
+                            <span th:case="*">🔧</span>
+                        </div>
+                        <h2 class="tool-name" th:text="${tool.name}">Tool Category</h2>
+                    </div>
+                    <p class="tool-description" th:text="${tool.description}">
+                        Tool description goes here.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span th:each="item : ${tool.items}" class="tool-tag" th:text="${item}">Tool name</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Categories Overview -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Tool Ecosystem</h2>
+            <div class="ecosystem-diagram">
+                <div class="ecosystem-layer">
+                    <h4>Plan & Code</h4>
+                    <div class="layer-tools">Jira, Git, GitHub, GitLab, VS Code</div>
+                </div>
+                <div class="ecosystem-arrow">↓</div>
+                <div class="ecosystem-layer">
+                    <h4>Build & Test</h4>
+                    <div class="layer-tools">Maven, Gradle, Jenkins, JUnit, SonarQube</div>
+                </div>
+                <div class="ecosystem-arrow">↓</div>
+                <div class="ecosystem-layer">
+                    <h4>Release & Deploy</h4>
+                    <div class="layer-tools">Docker, Kubernetes, Helm, Terraform</div>
+                </div>
+                <div class="ecosystem-arrow">↓</div>
+                <div class="ecosystem-layer">
+                    <h4>Operate & Monitor</h4>
+                    <div class="layer-tools">Prometheus, Grafana, ELK, Datadog</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/concepts">Concepts</a>
+                    <a href="/tools">Tools</a>
+                    <a href="/lifecycle">Lifecycle</a>
+                    <a href="/practices">Practices</a>
+                    <a href="/about">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

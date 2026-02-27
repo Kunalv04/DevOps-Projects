@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Concepts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="concepts.html" class="nav-link active">Concepts</a></li>
+                <li><a href="tools.html" class="nav-link">Tools</a></li>
+                <li><a href="lifecycle.html" class="nav-link">Lifecycle</a></li>
+                <li><a href="practices.html" class="nav-link">Practices</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Core <span class="gradient-text">DevOps Concepts</span></h1>
+            <p class="page-subtitle">
+                Understand the fundamental principles and practices that define the DevOps methodology.
+            </p>
+        </div>
+    </header>
+
+    <!-- Concepts Section -->
+    <section class="concepts-section">
+        <div class="container">
+            <div class="concepts-list">
+                <div class="concept-card" id="ci">
+                    <div class="concept-header">
+                        <h2 class="concept-title">Continuous Integration (CI)</h2>
+                        <div class="concept-icon">🔄</div>
+                    </div>
+                    <p class="concept-description">
+                        Continuous Integration is a development practice where developers integrate code into a shared repository frequently. Each integration is verified by an automated build and automated tests.
+                    </p>
+                    <div class="concept-benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Faster bug detection</li>
+                            <li>Reduced integration problems</li>
+                            <li>Faster development cycles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="concept-card" id="cd">
+                    <div class="concept-header">
+                        <h2 class="concept-title">Continuous Delivery (CD)</h2>
+                        <div class="concept-icon">🚀</div>
+                    </div>
+                    <p class="concept-description">
+                        Continuous Delivery is the ability to get changes of all types into production safely and quickly in a sustainable way.
+                    </p>
+                    <div class="concept-benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Automated release process</li>
+                            <li>Faster time to market</li>
+                            <li>Lower risk releases</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="concept-card" id="iac">
+                    <div class="concept-header">
+                        <h2 class="concept-title">Infrastructure as Code (IaC)</h2>
+                        <div class="concept-icon">📦</div>
+                    </div>
+                    <p class="concept-description">
+                        Infrastructure as Code is the practice of managing and provisioning infrastructure through code instead of manual processes.
+                    </p>
+                    <div class="concept-benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Version control for infrastructure</li>
+                            <li>Consistent environments</li>
+                            <li>Faster provisioning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="concept-card" id="microservices">
+                    <div class="concept-header">
+                        <h2 class="concept-title">Microservices</h2>
+                        <div class="concept-icon">🏗️</div>
+                    </div>
+                    <p class="concept-description">
+                        Microservices architecture structures an application as a collection of loosely coupled services, which implement business capabilities.
+                    </p>
+                    <div class="concept-benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Scalability</li>
+                            <li>Technology diversity</li>
+                            <li>Resilience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="concept-card" id="monitoring">
+                    <div class="concept-header">
+                        <h2 class="concept-title">Monitoring and Logging</h2>
+                        <div class="concept-icon">🔍</div>
+                    </div>
+                    <p class="concept-description">
+                        Continuous monitoring and logging provide real-time insights into application performance and help quickly identify and resolve issues.
+                    </p>
+                    <div class="concept-benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Proactive issue detection</li>
+                            <li>Performance optimization</li>
+                            <li>Better user experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="concept-card" id="collaboration">
+                    <div class="concept-header">
+                        <h2 class="concept-title">Collaboration and Communication</h2>
+                        <div class="concept-icon">🤝</div>
+                    </div>
+                    <p class="concept-description">
+                        DevOps emphasizes collaboration between development and operations teams, breaking down silos and improving communication.
+                    </p>
+                    <div class="concept-benefits">
+                        <h4>Key Benefits:</h4>
+                        <ul>
+                            <li>Faster problem resolution</li>
+                            <li>Shared responsibility</li>
+                            <li>Improved efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Cards -->
+    <section class="nav-cards-section">
+        <div class="container">
+            <h2 class="section-title">Continue Learning</h2>
+            <div class="nav-cards">
+                <a href="tools.html" class="nav-card">
+                    <div class="nav-card-icon">🛠️</div>
+                    <h3>DevOps Tools</h3>
+                    <p>Explore the essential tools used in DevOps pipelines.</p>
+                </a>
+                <a href="lifecycle.html" class="nav-card">
+                    <div class="nav-card-icon">♾️</div>
+                    <h3>DevOps Lifecycle</h3>
+                    <p>Learn about the 8 phases of the DevOps lifecycle.</p>
+                </a>
+                <a href="practices.html" class="nav-card">
+                    <div class="nav-card-icon">✅</div>
+                    <h3>Best Practices</h3>
+                    <p>Discover industry best practices for DevOps success.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="concepts.html">Concepts</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="lifecycle.html">Lifecycle</a>
+                    <a href="practices.html">Practices</a>
+                    <a href="about.html">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
