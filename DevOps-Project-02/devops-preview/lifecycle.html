@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Lifecycle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="concepts.html" class="nav-link">Concepts</a></li>
+                <li><a href="tools.html" class="nav-link">Tools</a></li>
+                <li><a href="lifecycle.html" class="nav-link active">Lifecycle</a></li>
+                <li><a href="practices.html" class="nav-link">Practices</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">The <span class="gradient-text">DevOps Lifecycle</span></h1>
+            <p class="page-subtitle">
+                Explore the 8 phases of the DevOps infinity loop that enable continuous delivery and improvement.
+            </p>
+        </div>
+    </header>
+
+    <!-- Infinity Loop Visualization -->
+    <section class="infinity-section">
+        <div class="container">
+            <div class="infinity-container">
+                <div class="infinity-half left">
+                    <h3>Development</h3>
+                </div>
+                <div class="infinity-half right">
+                    <h3>Operations</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifecycle Phases -->
+    <section class="lifecycle-section">
+        <div class="container">
+            <div class="phases-timeline">
+                <div class="phase-item" id="plan">
+                    <div class="phase-number">1</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Plan</h2>
+                            <div class="phase-icon">📋</div>
+                        </div>
+                        <p class="phase-description">
+                            Define requirements, create roadmaps, and plan the development process using agile methodologies.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Requirement gathering</li>
+                                <li>Sprint planning</li>
+                                <li>Backlog management</li>
+                                <li>Resource allocation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item phase-right" id="code">
+                    <div class="phase-number">2</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Code</h2>
+                            <div class="phase-icon">💻</div>
+                        </div>
+                        <p class="phase-description">
+                            Developers write code and use version control to manage changes and collaborate effectively.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Code development</li>
+                                <li>Version control</li>
+                                <li>Code reviews</li>
+                                <li>Branching strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" id="build">
+                    <div class="phase-number">3</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Build</h2>
+                            <div class="phase-icon">🔨</div>
+                        </div>
+                        <p class="phase-description">
+                            Compile code into executable artifacts and package applications with dependencies.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Compilation</li>
+                                <li>Dependency management</li>
+                                <li>Artifact creation</li>
+                                <li>Build automation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item phase-right" id="test">
+                    <div class="phase-number">4</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Test</h2>
+                            <div class="phase-icon">🧪</div>
+                        </div>
+                        <p class="phase-description">
+                            Execute automated tests to ensure code quality and catch bugs early in the development cycle.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Unit testing</li>
+                                <li>Integration testing</li>
+                                <li>Security testing</li>
+                                <li>Performance testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" id="release">
+                    <div class="phase-number">5</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Release</h2>
+                            <div class="phase-icon">🏷️</div>
+                        </div>
+                        <p class="phase-description">
+                            Prepare and approve releases, managing the deployment pipeline and release schedules.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Release planning</li>
+                                <li>Change management</li>
+                                <li>Approval workflows</li>
+                                <li>Release notes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item phase-right" id="deploy">
+                    <div class="phase-number">6</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Deploy</h2>
+                            <div class="phase-icon">🚀</div>
+                        </div>
+                        <p class="phase-description">
+                            Deploy applications to production or staging environments using automated deployment tools.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Automated deployment</li>
+                                <li>Blue-green deployment</li>
+                                <li>Canary releases</li>
+                                <li>Rollback strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" id="operate">
+                    <div class="phase-number">7</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Operate</h2>
+                            <div class="phase-icon">⚙️</div>
+                        </div>
+                        <p class="phase-description">
+                            Manage and maintain applications in production, ensuring availability and performance.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Infrastructure management</li>
+                                <li>Configuration management</li>
+                                <li>Scaling</li>
+                                <li>Patching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item phase-right" id="monitor">
+                    <div class="phase-number">8</div>
+                    <div class="phase-card">
+                        <div class="phase-header">
+                            <h2 class="phase-title">Monitor</h2>
+                            <div class="phase-icon">📊</div>
+                        </div>
+                        <p class="phase-description">
+                            Continuously monitor application performance, collect metrics, and gather feedback.
+                        </p>
+                        <div class="phase-activities">
+                            <h4>Key Activities:</h4>
+                            <ul>
+                                <li>Performance monitoring</li>
+                                <li>Log analysis</li>
+                                <li>Alerting</li>
+                                <li>User feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Loop -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-box">
+                <h2>The Feedback Loop</h2>
+                <p>
+                    The DevOps lifecycle is a continuous loop. Insights from monitoring feed back into planning, 
+                    creating a cycle of continuous improvement. This feedback-driven approach ensures that 
+                    applications evolve based on real user needs and system performance.
+                </p>
+                <div class="feedback-visual">
+                    <div class="feedback-cycle">
+                        <span class="cycle-item">Plan</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Code</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Build</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Test</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Release</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Deploy</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Operate</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Monitor</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Plan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="concepts.html">Concepts</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="lifecycle.html">Lifecycle</a>
+                    <a href="practices.html">Practices</a>
+                    <a href="about.html">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

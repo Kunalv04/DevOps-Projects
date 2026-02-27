@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About DevOps Basics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="concepts.html" class="nav-link">Concepts</a></li>
+                <li><a href="tools.html" class="nav-link">Tools</a></li>
+                <li><a href="lifecycle.html" class="nav-link">Lifecycle</a></li>
+                <li><a href="practices.html" class="nav-link">Practices</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">About <span class="gradient-text">This Application</span></h1>
+            <p class="page-subtitle">
+                Learn about the technology stack and architecture behind this DevOps educational webapp.
+            </p>
+        </div>
+    </header>
+
+    <!-- Application Info -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">☕</div>
+                    <h3>Java</h3>
+                    <p>Version 17</p>
+                    <p class="about-description">
+                        Built using Java, a robust and platform-independent programming language 
+                        perfect for enterprise applications.
+                    </p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">🍃</div>
+                    <h3>Spring Boot</h3>
+                    <p>Version 3.2.0</p>
+                    <p class="about-description">
+                        Leverages Spring Boot's auto-configuration and embedded server capabilities 
+                        for rapid application development.
+                    </p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">📦</div>
+                    <h3>Maven</h3>
+                    <p>Build Tool</p>
+                    <p class="about-description">
+                        Uses Maven for dependency management, build automation, and project lifecycle management.
+                    </p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">🌿</div>
+                    <h3>Thymeleaf</h3>
+                    <p>Templating Engine</p>
+                    <p class="about-description">
+                        Server-side Java template engine for rendering dynamic HTML pages with natural templating.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Structure -->
+    <section class="structure-section">
+        <div class="container">
+            <h2 class="section-title">Project Structure</h2>
+            <div class="structure-code">
+                <pre><code>devops-webapp/
+├── pom.xml                          <span class="comment"># Maven configuration with all dependencies</span>
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/devops/basics/
+│   │   │       ├── DevOpsBasicsApplication.java    <span class="comment"># Main Spring Boot class</span>
+│   │   │       ├── controller/
+│   │   │       │   └── DevOpsController.java       <span class="comment"># Web request handlers</span>
+│   │   │       └── model/
+│   │   │           └── DevOpsConcept.java          <span class="comment"># Data model</span>
+│   │   └── resources/
+│   │       ├── templates/           <span class="comment"># Thymeleaf HTML templates</span>
+│   │       │   ├── index.html
+│   │       │   ├── concepts.html
+│   │       │   ├── tools.html
+│   │       │   ├── lifecycle.html
+│   │       │   ├── practices.html
+│   │       │   └── about.html
+│   │       └── static/
+│   │           └── css/
+│   │               └── style.css    <span class="comment"># Stylesheet</span>
+│   └── test/                        <span class="comment"># Unit tests</span>
+└── target/                          <span class="comment"># Build output</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dependencies -->
+    <section class="dependencies-section">
+        <div class="container">
+            <h2 class="section-title">Maven Dependencies</h2>
+            <div class="dependencies-list">
+                <div class="dependency-item">
+                    <div class="dependency-name">spring-boot-starter-web</div>
+                    <div class="dependency-desc">Web application support with embedded Tomcat</div>
+                </div>
+                <div class="dependency-item">
+                    <div class="dependency-name">spring-boot-starter-thymeleaf</div>
+                    <div class="dependency-desc">Server-side HTML templating engine</div>
+                </div>
+                <div class="dependency-item">
+                    <div class="dependency-name">spring-boot-starter-actuator</div>
+                    <div class="dependency-desc">Production-ready monitoring and management endpoints</div>
+                </div>
+                <div class="dependency-item">
+                    <div class="dependency-name">spring-boot-devtools</div>
+                    <div class="dependency-desc">Development tools with automatic restart</div>
+                </div>
+                <div class="dependency-item">
+                    <div class="dependency-name">spring-boot-starter-test</div>
+                    <div class="dependency-desc">Testing support with JUnit and Mockito</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Run -->
+    <section class="run-section">
+        <div class="container">
+            <h2 class="section-title">How to Run</h2>
+            <div class="run-steps">
+                <div class="run-step">
+                    <h4>1. Build the Application</h4>
+                    <div class="code-block">
+                        <code>mvn clean package</code>
+                    </div>
+                </div>
+                <div class="run-step">
+                    <h4>2. Run the Application</h4>
+                    <div class="code-block">
+                        <code>mvn spring-boot:run</code>
+                    </div>
+                </div>
+                <div class="run-step">
+                    <h4>3. Access the Application</h4>
+                    <div class="code-block">
+                        <code>Open http://localhost:8080 in your browser</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Version Info -->
+    <section class="version-section">
+        <div class="container">
+            <div class="version-box">
+                <div class="version-item">
+                    <span class="version-label">Application Version:</span>
+                    <span class="version-value">1.0.0</span>
+                </div>
+                <div class="version-item">
+                    <span class="version-label">Java Version:</span>
+                    <span class="version-value">17</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="concepts.html">Concepts</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="lifecycle.html">Lifecycle</a>
+                    <a href="practices.html">Practices</a>
+                    <a href="about.html">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

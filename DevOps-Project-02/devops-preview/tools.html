@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Tools</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span>DevOps Basics</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="concepts.html" class="nav-link">Concepts</a></li>
+                <li><a href="tools.html" class="nav-link active">Tools</a></li>
+                <li><a href="lifecycle.html" class="nav-link">Lifecycle</a></li>
+                <li><a href="practices.html" class="nav-link">Practices</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Essential <span class="gradient-text">DevOps Tools</span></h1>
+            <p class="page-subtitle">
+                Discover the tools that power modern DevOps workflows across the entire software development lifecycle.
+            </p>
+        </div>
+    </header>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="tools-grid">
+                <div class="tool-card" id="vcs">
+                    <div class="tool-header">
+                        <div class="tool-icon-large">📚</div>
+                        <h2 class="tool-name">Version Control</h2>
+                    </div>
+                    <p class="tool-description">
+                        Tools for tracking and managing changes to code. Git is the most popular distributed version control system.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Git</span>
+                            <span class="tool-tag">GitHub</span>
+                            <span class="tool-tag">GitLab</span>
+                            <span class="tool-tag">Bitbucket</span>
+                            <span class="tool-tag">SVN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="cicd">
+                    <div class="tool-header">
+                        <div class="tool-icon-large">⚙️</div>
+                        <h2 class="tool-name">CI/CD Tools</h2>
+                    </div>
+                    <p class="tool-description">
+                        Tools for automating the build, test, and deployment processes.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Jenkins</span>
+                            <span class="tool-tag">GitLab CI</span>
+                            <span class="tool-tag">GitHub Actions</span>
+                            <span class="tool-tag">CircleCI</span>
+                            <span class="tool-tag">Travis CI</span>
+                            <span class="tool-tag">Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="containers">
+                    <div class="tool-header">
+                        <div class="tool-icon-large">📦</div>
+                        <h2 class="tool-name">Containerization</h2>
+                    </div>
+                    <p class="tool-description">
+                        Tools for packaging applications with their dependencies into standardized units.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Docker</span>
+                            <span class="tool-tag">containerd</span>
+                            <span class="tool-tag">Podman</span>
+                            <span class="tool-tag">LXC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="orchestration">
+                    <div class="tool-header">
+                        <div class="tool-icon-large">☸️</div>
+                        <h2 class="tool-name">Orchestration</h2>
+                    </div>
+                    <p class="tool-description">
+                        Tools for automating the deployment, scaling, and management of containerized applications.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Kubernetes</span>
+                            <span class="tool-tag">Docker Swarm</span>
+                            <span class="tool-tag">OpenShift</span>
+                            <span class="tool-tag">Nomad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="iac-tools">
+                    <div class="tool-header">
+                        <div class="tool-icon-large">🏗️</div>
+                        <h2 class="tool-name">Infrastructure as Code</h2>
+                    </div>
+                    <p class="tool-description">
+                        Tools for managing infrastructure through code and automation.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Terraform</span>
+                            <span class="tool-tag">Ansible</span>
+                            <span class="tool-tag">Puppet</span>
+                            <span class="tool-tag">Chef</span>
+                            <span class="tool-tag">CloudFormation</span>
+                            <span class="tool-tag">Pulumi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="observability">
+                    <div class="tool-header">
+                        <div class="tool-icon-large">📊</div>
+                        <h2 class="tool-name">Monitoring & Observability</h2>
+                    </div>
+                    <p class="tool-description">
+                        Tools for tracking application performance, logs, and metrics.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Prometheus</span>
+                            <span class="tool-tag">Grafana</span>
+                            <span class="tool-tag">ELK Stack</span>
+                            <span class="tool-tag">Datadog</span>
+                            <span class="tool-tag">New Relic</span>
+                            <span class="tool-tag">Jaeger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="cloud">
+                    <div class="tool-header">
+                        <div class="tool-icon-large">☁️</div>
+                        <h2 class="tool-name">Cloud Platforms</h2>
+                    </div>
+                    <p class="tool-description">
+                        Cloud service providers for hosting and managing applications.
+                    </p>
+                    <div class="tool-list">
+                        <h4>Popular Tools:</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">AWS</span>
+                            <span class="tool-tag">Azure</span>
+                            <span class="tool-tag">Google Cloud Platform</span>
+                            <span class="tool-tag">IBM Cloud</span>
+                            <span class="tool-tag">Oracle Cloud</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Categories Overview -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Tool Ecosystem</h2>
+            <div class="ecosystem-diagram">
+                <div class="ecosystem-layer">
+                    <h4>Plan & Code</h4>
+                    <div class="layer-tools">Jira, Git, GitHub, GitLab, VS Code</div>
+                </div>
+                <div class="ecosystem-arrow">↓</div>
+                <div class="ecosystem-layer">
+                    <h4>Build & Test</h4>
+                    <div class="layer-tools">Maven, Gradle, Jenkins, JUnit, SonarQube</div>
+                </div>
+                <div class="ecosystem-arrow">↓</div>
+                <div class="ecosystem-layer">
+                    <h4>Release & Deploy</h4>
+                    <div class="layer-tools">Docker, Kubernetes, Helm, Terraform</div>
+                </div>
+                <div class="ecosystem-arrow">↓</div>
+                <div class="ecosystem-layer">
+                    <h4>Operate & Monitor</h4>
+                    <div class="layer-tools">Prometheus, Grafana, ELK, Datadog</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span>DevOps Basics</span>
+                </div>
+                <p class="footer-text">A Java Spring Boot application demonstrating DevOps fundamentals.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="concepts.html">Concepts</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="lifecycle.html">Lifecycle</a>
+                    <a href="practices.html">Practices</a>
+                    <a href="about.html">About</a>
+                </div>
+                <p class="footer-copyright">Built with Java, Spring Boot & Maven</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
