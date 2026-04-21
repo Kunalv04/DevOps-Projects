@@ -19,13 +19,13 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Backend Image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/backend ./DevOps-Project-04/backend
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/backend ./DevOps-Project-03/backend
 
     - name: Build React Image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/react ./DevOps-Project-04/frontend
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/react ./DevOps-Project-03/frontend
 
     - name: Build LAMP Image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/lamp ./DevOps-Project-04/lamp
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/lamp ./DevOps-Project-03/lamp
 
     - name: Push Backend Image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/backend
@@ -46,13 +46,13 @@ jobs:
 
     - name: Run Tests
       run: |
-        cd DevOps-Project-04/backend
+        cd DevOps-Project-03/backend
         npm install
         npm test
 
     - name: Run Frontend Tests
       run: |
-        cd DevOps-Project-04/frontend
+        cd DevOps-Project-03/frontend
         npm install
         npm test
 
