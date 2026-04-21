@@ -1,0 +1,16 @@
+IoT Device
+   │ (BLE)
+   ▼
+BLE Gateway
+   │
+   ▼
+NGINX (Reverse Proxy)
+   │
+   ├── /app → React (80)
+   ├── /api → Backend (5000)
+   └── /legacy → Apache (80)
+   │
+   ▼
+Databases
+   ├── MongoDB (27017)
+   └── MySQL (3306)

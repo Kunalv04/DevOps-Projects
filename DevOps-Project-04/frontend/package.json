@@ -1,0 +1,8 @@
+{
+  "name": "simple-react-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo Building React App && mkdir build && echo Hello React > build/index.html",
+    "test": "echo \"Running tests...\""
+  }
+}
